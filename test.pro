@@ -14,13 +14,15 @@ SOURCES += \
     mainpage.cpp \
     mainsettings.cpp \
     mainwindow.cpp \
-    startpage.cpp
+    startpage.cpp \
+    testing_class.cpp
 
 HEADERS += \
     mainpage.h \
     mainsettings.h \
     mainwindow.h \
-    startpage.h
+    startpage.h \
+    testing_class.h
 
 FORMS += \
     mainpage.ui \
