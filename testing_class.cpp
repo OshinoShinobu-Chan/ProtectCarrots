@@ -7,3 +7,6 @@ testing_class::testing_class(QWidget *parent)
 
 }
 
+bool testing_class::change(){
+    return true;
+}
