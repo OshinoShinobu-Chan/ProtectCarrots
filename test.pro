@@ -16,6 +16,7 @@ SOURCES += \
     mainsettings.cpp \
     mainwindow.cpp \
     startpage.cpp \
+    tower.cpp
 
 HEADERS += \
     coordinate.h \
@@ -23,6 +24,7 @@ HEADERS += \
     mainsettings.h \
     mainwindow.h \
     startpage.h \
+    tower.h
 
 FORMS += \
     mainpage.ui \
