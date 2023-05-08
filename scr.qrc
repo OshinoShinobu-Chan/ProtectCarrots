@@ -2,4 +2,14 @@
     <qresource prefix="/">
         <file>src/Never Gonna Give You Up.mp3</file>
     </qresource>
+    <qresource prefix="/plant">
+        <file>src/plant/bottle_tower.jpg</file>
+        <file>src/plant/star_tower.jpg</file>
+        <file>src/plant/sunflower.jpg</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>src/img/background.png</file>
+        <file>src/img/coin_test.png</file>
+        <file>src/img/woodboard.png</file>
+    </qresource>
 </RCC>
