@@ -10,17 +10,19 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    coordinate.cpp \
     main.cpp \
     mainpage.cpp \
     mainsettings.cpp \
     mainwindow.cpp \
-    startpage.cpp
+    startpage.cpp \
 
 HEADERS += \
+    coordinate.h \
     mainpage.h \
     mainsettings.h \
     mainwindow.h \
-    startpage.h
+    startpage.h \
 
 FORMS += \
     mainpage.ui \
