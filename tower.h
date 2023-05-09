@@ -21,7 +21,8 @@ public:
     void setHurt(double _hurt);
     double getFreq();
     void setFreq(double _freq);
-    int getTarget(Coordinate* dest);
+    void getTarget(Coordinate* dest);
+    int getTargetNum();
     virtual void renewTarget() = 0;//更新目标列表
     std::string getImgpath();
     void setImgpath(std::string path);
