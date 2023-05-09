@@ -16,6 +16,7 @@ SOURCES += \
     mainsettings.cpp \
     mainwindow.cpp \
     startpage.cpp \
+    suntower.cpp \
     tower.cpp
 
 HEADERS += \
@@ -24,13 +25,15 @@ HEADERS += \
     mainsettings.h \
     mainwindow.h \
     startpage.h \
+    suntower.h \
     tower.h
 
 FORMS += \
     mainpage.ui \
     mainsettings.ui \
     mainwindow.ui \
-    startpage.ui
+    startpage.ui \
+    suntower.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

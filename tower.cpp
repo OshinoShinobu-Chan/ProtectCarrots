@@ -1,7 +1,10 @@
 
 #include "tower.h"
 
-Tower::Tower(int _type) : type(_type){}
+Tower::Tower(int _type, Coordinate _location)
+    : type(_type),
+    location(_location)
+    {}
 
 Tower::~Tower(){}
 
@@ -39,6 +42,14 @@ void Tower::setFreq(double _freq){
 
 int Tower::getTargetNum(){
     return targetNum;
+}
+
+void Tower::setImgpath(std::string path){
+    imgpath = path;
+}
+
+std::string Tower::getImgpath(){
+    return imgpath;
 }
 
 void Tower::getTarget(Coordinate* dest){

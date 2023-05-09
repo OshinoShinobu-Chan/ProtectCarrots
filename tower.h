@@ -8,7 +8,7 @@
 class Tower
 {
 public:
-    Tower(int _type);
+    Tower(int _type, Coordinate _lacation);
     ~Tower();
     virtual void animeProcess() = 0;//没有攻击时的动画
     virtual void animeAttack() = 0;
@@ -37,6 +37,7 @@ private:
     double hurt;//造成的伤害值
     double freq;//攻击的频率，单位暂定为次/分
     Coordinate* targets;//攻击的目标的坐标列表，可以考虑是否需要坐标类
+    Coordinate location;//塔的位置
     int targetNum;//攻击目标的数量
     std::string imgpath;//图片的路径
 
