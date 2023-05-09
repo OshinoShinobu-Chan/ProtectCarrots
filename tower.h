@@ -3,10 +3,13 @@
 #define TOWER_H
 
 #include "coordinate.h"
+#include <string>
 
 class Tower
 {
 public:
+    Tower(int _type);
+    ~Tower();
     virtual void animeProcess() = 0;//没有攻击时的动画
     virtual void animeAttack() = 0;
     virtual void Attack() = 0;//攻击
@@ -20,8 +23,8 @@ public:
     virtual void setFreq(double _freq) = 0;
     virtual int getTarget(Coordinate* dest) = 0;
     virtual void renewTarget() = 0;//更新目标列表
-    virtual string getImgpath() = 0;
-    virtual void setImgpath(string path) = 0;
+    virtual std::string getImgpath() = 0;
+    virtual void setImgpath(std::string path) = 0;
     
 
 private:
@@ -32,7 +35,9 @@ private:
     double freq;//攻击的频率，单位暂定为次/分
     Coordinate* targets;//攻击的目标的坐标列表，可以考虑是否需要坐标类
     int targetNum;//攻击目标的数量
-    string imgpath;//图片的路径
+    std::string imgpath;//图片的路径
+    static const int TYPE_BOTTLE_TOWER = 1;
+    static const int TPYE_SUNTOWER = 2;
 };
 
 #endif // TOWER_H

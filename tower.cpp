@@ -1,8 +1,5 @@
 
 #include "tower.h"
 
-Tower::Tower()
-{
-
-}
-
+Tower::Tower(int _type) : type(_type){}
+Tower::~Tower(){}
