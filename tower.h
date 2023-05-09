@@ -25,6 +25,8 @@ public:
     virtual void renewTarget() = 0;//更新目标列表
     virtual std::string getImgpath() = 0;
     virtual void setImgpath(std::string path) = 0;
+    static const int TYPE_BOTTLE_TOWER = 1;
+    static const int TPYE_SUNTOWER = 2;
     
 
 private:
@@ -36,8 +38,7 @@ private:
     Coordinate* targets;//攻击的目标的坐标列表，可以考虑是否需要坐标类
     int targetNum;//攻击目标的数量
     std::string imgpath;//图片的路径
-    static const int TYPE_BOTTLE_TOWER = 1;
-    static const int TPYE_SUNTOWER = 2;
+
 };
 
 #endif // TOWER_H
