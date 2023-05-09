@@ -13,18 +13,18 @@ public:
     virtual void animeProcess() = 0;//没有攻击时的动画
     virtual void animeAttack() = 0;
     virtual void Attack() = 0;//攻击
-    virtual int getLevel()= 0;
-    virtual void setLevel(int _level)= 0;
-    virtual int getType()= 0;
-    virtual void setTpye(int _type)= 0;
-    virtual double getHurt()= 0;
-    virtual void setHurt(double _hurt)= 0;
-    virtual double getFreq() = 0;
-    virtual void setFreq(double _freq) = 0;
-    virtual int getTarget(Coordinate* dest) = 0;
+    int getLevel();
+    void setLevel(int _level);
+    int getType();
+    void setTpye(int _type);
+    double getHurt();
+    void setHurt(double _hurt);
+    double getFreq();
+    void setFreq(double _freq);
+    int getTarget(Coordinate* dest);
     virtual void renewTarget() = 0;//更新目标列表
-    virtual std::string getImgpath() = 0;
-    virtual void setImgpath(std::string path) = 0;
+    std::string getImgpath();
+    void setImgpath(std::string path);
     static const int TYPE_BOTTLE_TOWER = 1;
     static const int TPYE_SUNTOWER = 2;
     
