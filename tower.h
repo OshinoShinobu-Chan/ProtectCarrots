@@ -2,44 +2,41 @@
 #ifndef TOWER_H
 #define TOWER_H
 
-#include "coordinate.h"
 #include <string>
+#include <QGraphicsItem>
 
-class Tower
+class Tower : public QGraphicsItem
 {
 public:
-    Tower(int _type, Coordinate _lacation);
+    Tower(int _type, QPointF _location);
     ~Tower();
-    virtual void animeProcess() = 0;//没有攻击时的动画
+    QRectF boundingRect() const override;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+               QWidget *widget) override;
+
     virtual void animeAttack() = 0;
     virtual void Attack() = 0;//攻击
-    int getLevel();
-    void setLevel(int _level);
-    int getType();
-    void setTpye(int _type);
-    double getHurt();
-    void setHurt(double _hurt);
-    double getFreq();
-    void setFreq(double _freq);
-    void getTarget(Coordinate* dest);
-    int getTargetNum();
     virtual void renewTarget() = 0;//更新目标列表
-    std::string getImgpath();
-    void setImgpath(std::string path);
+    virtual Monster* getTarget() = 0;
+
     static const int TYPE_BOTTLE_TOWER = 1;
     static const int TPYE_SUNTOWER = 2;
-    
+    static const int DATA_LEVEL = 0;//在使用setData和data方法的时候下面这些
+    static const int DATA_TYPE = 1;
+    static const int DATA_VALUE = 2;
+    static const int DATA_HURT = 3;
+    static const int DATA_FREQ = 4;
+    static const int DATA_TARGET_NUM = 6;
+    static const int DATA_IMGPATH = 5;
+    static const int DATA_RANGE = 7;
+    static const int DATA_ANGLE = 8;
+    static const int DATA_LOCATION = 9;
+
+protected:
+    virtual void advance(int step) override = 0;
 
 private:
-    int level;//等级
-    int type;//类型,使用类型常量
-    int value;//价值，即需要花费的金钱
-    double hurt;//造成的伤害值
-    double freq;//攻击的频率，单位暂定为次/分
-    Coordinate* targets;//攻击的目标的坐标列表，可以考虑是否需要坐标类
-    Coordinate location;//塔的位置
-    int targetNum;//攻击目标的数量
-    std::string imgpath;//图片的路径
+    Monster* targets;//攻击的目标的数组的头指针，更新的时候需要delete
 
 };
 

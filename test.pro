@@ -1,5 +1,6 @@
 QT       += core gui
  QT += multimedia
+ QT += core
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,30 +11,29 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    botteltower.cpp \
     coordinate.cpp \
     main.cpp \
     mainpage.cpp \
     mainsettings.cpp \
     mainwindow.cpp \
     startpage.cpp \
-    suntower.cpp \
     tower.cpp
 
 HEADERS += \
+    botteltower.h \
     coordinate.h \
     mainpage.h \
     mainsettings.h \
     mainwindow.h \
     startpage.h \
-    suntower.h \
     tower.h
 
 FORMS += \
     mainpage.ui \
     mainsettings.ui \
     mainwindow.ui \
-    startpage.ui \
-    suntower.ui
+    startpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
