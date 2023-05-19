@@ -12,6 +12,7 @@ class BottelTower : public Tower
 public:
     BottelTower(QPointF _location);
     ~BottelTower();
+    void advance(int phase);
     QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget) override;
@@ -21,7 +22,11 @@ public:
     void Attack() override;
     Monster* getNearest();
     qreal getAngle(QPoint a);//用于计算炮口的角度
+    void rotateAnime();
     static const int BOTTLE_SPEED;
+public:
+    int frame;
+    static const double FPS = 30.0;
 };
 
 #endif // BOTTELTOWER_H

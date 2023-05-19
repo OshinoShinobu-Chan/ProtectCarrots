@@ -31,9 +31,11 @@ public:
     static const int DATA_RANGE = 7;
     static const int DATA_ANGLE = 8;
     static const int DATA_LOCATION = 9;
+    static const int DATA_WIDTH = 10;
+    static const int DATA_HEIGHT = 11;
 
 protected:
-    virtual void advance(int step) override = 0;
+    virtual void advance(int phase) override = 0;
 
 private:
     Monster* targets;//攻击的目标的数组的头指针，更新的时候需要delete
